@@ -351,7 +351,7 @@ nav{
 
 .blog {
   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-  url(images/blog.jpg);
+  url(images/others/blog.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -608,4 +608,29 @@ nav{
 
 .portfolio__grid {
   gap: 2rem;
+}
+
+/*Below is for screen iphone adjustment */ 
+@media screen and (max-width: 1024px) {
+  .header {
+    min-height: 500px; /* Adjust for smaller screens */
+    background-size: contain; /* Ensure full image is visible */
+    background-position: top center; /* Focus on the top portion */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    min-height: 400px; /* Further reduce height for phones */
+    background-size: cover; /* Fill the space while maintaining proportions */
+    background-position: center; /* Center the image */
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .header {
+    min-height: 300px; /* Optimize for landscape orientation */
+    background-size: contain; /* Ensure the entire image fits */
+    background-position: center center;
+  }
 }
